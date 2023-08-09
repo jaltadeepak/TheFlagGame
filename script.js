@@ -283,6 +283,8 @@ const imgdiv = document.querySelector('.flagpic');
 function updateImage() {
     randomCountry = getRandomKey(countries);
     image.src = 'images/' + randomCountry.toLowerCase() + '.png';
+    image.style.width = '150px';
+    image.style.height = '100px';
     imgdiv.innerHTML = '';
     imgdiv.appendChild(image);
     // updateHintText(randomCountry);

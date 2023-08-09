@@ -28,7 +28,7 @@ body{
 .flagpic{
     height: 100px;
     width: 150px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
