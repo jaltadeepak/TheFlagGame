@@ -285,6 +285,8 @@ function updateImage() {
     image.src = 'images/' + randomCountry.toLowerCase() + '.png';
     image.style.width = '150px';
     image.style.height = '100px';
+    image.style.border = '1px solid black'
+    image.style.boxShadow = '10px 10px 10px #d7d7d7'
     imgdiv.innerHTML = '';
     imgdiv.appendChild(image);
     // updateHintText(randomCountry);

@@ -1,34 +1,33 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(26, 26, 26);
-    color: white;
-}
-.nav{
-    height: 5vh;
-    width: 100%;
-    /* padding: 10px; */
-    background-color: rgb(74, 74, 74);
+    background-color: #dde3e4;
+    height: 100vh;
+    color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Inter', sans-serif;
 }
 #logo{
     color: rgb(207, 215, 222);
     font-weight: 600;
 }
 .main{
-    height: 95vh;
+    background-color: #ffffff;
+    height: 45vh;
+    width: 25vw;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 10px #d7d7d7;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 .flagpic{
     height: 100px;
     width: 150px;
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
