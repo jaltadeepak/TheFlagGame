@@ -292,9 +292,32 @@ function updateImage() {
     // updateHintText(randomCountry);
 }
 
-const textInput = document.getElementById('fname');
+const textInput = document.getElementById('inputBox');
 const submitButton = document.getElementById('submitButton');
 const scoreBox = document.querySelector('.score');
+
+inputBox.addEventListener("input", () => {
+    const inputValue = inputBox.value.toLowerCase();
+    const filteredData = Object.values(countries).filter(item => item.toLowerCase().includes(inputValue));
+    displaySuggestions(filteredData);
+});
+
+function displaySuggestions(filteredData) {
+    suggestions.innerHTML = "";
+  
+    filteredData.forEach(item => {
+      const suggestion = document.createElement("div");
+      suggestion.className = "suggestion";
+      suggestion.textContent = item;
+  
+      suggestion.addEventListener("click", () => {
+        inputBox.value = item;
+        suggestions.innerHTML = "";
+      });
+  
+      suggestions.appendChild(suggestion);
+    });
+}
 
 function addScore(){
     score++;
@@ -316,6 +339,7 @@ textInput.addEventListener('keydown', (event) => {
 });
 
 submitButton.addEventListener('click', ()=>{
+    suggestions.innerHTML = "";
     const inputValue = textInput.value.trim().toLowerCase().replace(/\s+/g, '');
     if(inputValue === countries[randomCountry].toLowerCase().replace(/\s+/g, '')){
         addScore();

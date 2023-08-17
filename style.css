@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: #dde3e4;
@@ -9,11 +9,13 @@ body{
     justify-content: center;
     font-family: 'Inter', sans-serif;
 }
-#logo{
+
+#logo {
     color: rgb(207, 215, 222);
     font-weight: 600;
 }
-.main{
+
+.main {
     background-color: #ffffff;
     height: 50vh;
     width: 20rem;
@@ -25,10 +27,44 @@ body{
     justify-content: center;
     gap: 2rem;
 }
-.flagpic{
+
+.flagpic {
     height: 100px;
     width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.answerbox{
+    position: relative;
+}
+
+.fname{
+    width: 150px;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* border: 1px solid #ccc; */
+    background-color: #f2f2f2;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background-color: #ccc;
+}
+
+.suggestions::-webkit-scrollbar {
+    display: none;
 }
