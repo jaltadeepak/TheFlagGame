@@ -44,6 +44,10 @@ body {
     width: 150px;
 }
 
+button {
+    font-family: 'Inter', sans-serif;
+}
+
 .suggestions {
     position: absolute;
     top: 100%;
